@@ -1,0 +1,2 @@
+$ docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=db_example -e MYSQL_USER=springuser -e MYSQL_PASSWORD=pass mysql:latest
+$ docker run -it --name vulnerable-api --link mysql:mysql -p 8080:8080 vulnerable-api
