@@ -4,14 +4,19 @@ spring:
     username: springuser
     password: pass
     platform: mysql
-#    data: data-mysql.sql
-#    initialize: false
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: validate
 spring:
   profiles: container
   datasource:
     url: jdbc:mysql://172.18.0.2:3306/db_example
     username: springuser
     password: pass
-#    initialize: true
+  jpa:
+      database-platform: org.hibernate.dialect.MySQLDialect
+      hibernate:
+        use-new-id-generator-mappings: false
+        ddl-auto: validate
